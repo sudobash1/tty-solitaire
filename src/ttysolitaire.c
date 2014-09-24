@@ -4,6 +4,7 @@
 #include <getopt.h>
 #include <errno.h>
 
+#include "gui.h"
 #include "game.h"
 #include "keyboard.h"
 #include "common.h"
@@ -19,15 +20,17 @@ int main(int argc, char *argv[]) {
   int option;
   int option_index;
   int passes_through_deck = 3;
+  int use_utf8 = 0;
   static const struct option options[] = {
     {"help",    no_argument,       NULL, 'h'},
     {"version", no_argument,       NULL, 'v'},
-    {"passes",  required_argument, NULL, 'p'}
+    {"passes",  required_argument, NULL, 'p'},
+    {"utf8",    no_argument,       NULL, 'u'}
   };
 
   program_name = argv[0];
 
-  while ((option = getopt_long(argc, argv, "hvp:", options, &option_index)) != -1) {
+  while ((option = getopt_long(argc, argv, "hvp:u", options, &option_index)) != -1) {
     switch (option) {
     case 'v':
       version();
@@ -35,6 +38,9 @@ int main(int argc, char *argv[]) {
     case 'p':
       passes_through_deck = atoi(optarg);
       break;
+    case 'u':
+      use_utf8 = true;
+      break;   
     case 'h':
     default:
       usage(program_name);
@@ -42,6 +48,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
+  set_utf8_mode(use_utf8);
   setlocale(LC_ALL, "");
   initscr();
   raw();
@@ -115,10 +122,11 @@ void draw_greeting() {
 }
 
 void usage(const char *program_name) {
-  printf("usage: %s [-v|--version] [-h|--help] [-p|--passes=NUMBER]\n", program_name);
+  printf("usage: %s [-v|--version] [-h|--help] [-p|--passes=NUMBER] [-u|--utf8]\n", program_name);
   printf("  -v, --version  Show version\n");
   printf("  -h, --help     Show this message\n");
   printf("  -p, --passes   Number of passes through the deck\n");
+  printf("  -u, --utf8     Use UTF8 symbols for suits instead of ascii\n");
 }
 
 void version() {
@@ -133,3 +141,4 @@ void version() {
   printf("%s\n", version_string);
   fclose(version_file);
 }
+

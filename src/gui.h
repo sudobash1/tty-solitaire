@@ -20,5 +20,6 @@ void draw_cursor(struct cursor *);
 void erase_card(struct card *);
 void erase_stack(struct stack *);
 void erase_cursor(struct cursor *);
+void set_utf8_mode(int utf8_enabled);
 
 #endif

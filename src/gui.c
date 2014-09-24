@@ -7,10 +7,17 @@
 #include "deck.h"
 #include "game.h"
 
-static const char *card_suits[4] = { "\u2666", "\u2660", "\u2665", "\u2663" };
+static const char *utf8_card_suits[4] = { "\u2666", "\u2660", "\u2665", "\u2663" };
+static const char *txt_card_suits[4] = { "<>", "/\\", "<B", "oo" };
+char const **card_suits = NULL;
+
 static const char *card_values[13] = {
   "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 };
+
+void set_utf8_mode(int utf8_enabled) {
+  card_suits = utf8_enabled ? utf8_card_suits : txt_card_suits;
+}
 
 static void draw_value(struct card *card) {
   mvwprintw(card->frame->window, 0, 0, card_values[card->value]);
