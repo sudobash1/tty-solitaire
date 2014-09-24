@@ -41,3 +41,6 @@ void deck_free(struct deck *deck) {
   }
   free(deck);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

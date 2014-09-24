@@ -212,3 +212,6 @@ bool game_won() {
            stack_length(deck->foundation[2]) == 13 &&
            stack_length(deck->foundation[3]) == 13);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

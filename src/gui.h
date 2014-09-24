@@ -23,3 +23,6 @@ void erase_cursor(struct cursor *);
 void set_utf8_mode(int utf8_enabled);
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

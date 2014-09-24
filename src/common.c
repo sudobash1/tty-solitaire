@@ -23,3 +23,6 @@ void tty_solitaire_generic_error(int errno, char *file, int line) {
   fprintf(stderr, "%s\n", message);
   exit(errno);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

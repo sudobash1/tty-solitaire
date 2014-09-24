@@ -18,3 +18,6 @@ void deck_init(struct deck *);
 void deck_free(struct deck *);
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

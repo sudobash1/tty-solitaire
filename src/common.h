@@ -15,3 +15,6 @@ void tty_solitaire_generic_error(int, char *, int);
 bool term_size_ok();
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

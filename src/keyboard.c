@@ -245,3 +245,6 @@ void keyboard_event(int key) {
     handle_term_resize();
   }
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

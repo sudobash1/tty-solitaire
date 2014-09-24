@@ -36,3 +36,6 @@ struct frame *frame_dup(struct frame *frame) {
 
   return(new_frame);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

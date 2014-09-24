@@ -19,3 +19,6 @@ struct stack *stack_reverse(struct stack *);
 struct stack *stack_dup(struct stack *);
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

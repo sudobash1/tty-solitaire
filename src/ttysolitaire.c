@@ -142,3 +142,6 @@ void version() {
   fclose(version_file);
 }
 
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

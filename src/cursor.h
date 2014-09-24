@@ -48,3 +48,6 @@ bool cursor_on_stock(struct cursor *);
 bool cursor_on_invalid_spot(struct cursor *);
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

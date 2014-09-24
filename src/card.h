@@ -40,3 +40,6 @@ void card_unmark(struct card *);
 struct card *card_dup(struct card *);
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

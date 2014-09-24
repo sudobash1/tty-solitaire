@@ -65,3 +65,6 @@ struct card *card_dup(struct card *card) {
 
   return(new_card);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

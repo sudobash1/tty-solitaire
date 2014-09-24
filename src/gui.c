@@ -134,3 +134,6 @@ void erase_cursor(struct cursor *cursor) {
   wdelch(cursor->window);
   wrefresh(cursor->window);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

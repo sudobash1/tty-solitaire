@@ -47,3 +47,6 @@ bool game_won();
 void game_end();
 
 #endif
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

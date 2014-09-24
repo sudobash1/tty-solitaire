@@ -150,3 +150,6 @@ bool cursor_on_stock(struct cursor *cursor) {
 bool cursor_on_invalid_spot(struct cursor *cursor) {
   return(!cursor_stack(cursor));
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+

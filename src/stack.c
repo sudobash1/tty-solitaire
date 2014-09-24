@@ -123,3 +123,6 @@ struct stack *stack_reverse(struct stack *stack) {
   }
   return(tmp_stack);
 }
+
+// vim: shiftwidth=2 tabstop=2 softtabstop=2
+
